@@ -5,35 +5,35 @@ settings:
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
+  allmonitorsOperational: 'Tout les Système sont Operationel'
+  notAllmonitorsOperational: 'Les Systeme ne sont pas tous Operationel'
+  monitorLabelOperational: 'Operationel'
+  monitorLabelNotOperational: 'Non Operationel'
   monitorLabelNoData: 'No data'
   dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
+  dayInHistogramOperational: 'Tout Operationel'
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: Site Vitrine # unique identifier
+    name: Site Vitrine
+    description: '' # default=empty
+    url: 'https://eaglecloud.fr/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: Espace Client
+    name: Espace Client
+    description: ''
+    url: 'https://my.eaglecloud.fr'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: Web Panel
+    name: Cpanel & Whm
+    url: 'https://r5.directdns.com/'
     method: GET
     expectStatus: 200
